@@ -1544,60 +1544,8 @@ void transformare_densitate(long double &numar)
     while(l1!='z');
 }
 
-void transformare_combustibil(long double &numar)
-{
-    char l1;
-    cout.precision(10);
-    cout<<"Unitati de masura disponibile: \nMile/galon (a)\nKm/Litru (b)";
-    cout<<'\n';
-    cout<<"Pentru iesire apasati tasta z \n";
-    cout<<'\n';
-    do
-    {
-            cout<<"Introduceti valoarea in L/100 Km\n";
-            cin>>numar;
-            cout<<"In ce unitate de masura transformati? (cod corespunzator)\n";
-            cin>>l1;
-            cout<<'\n';
-        switch(l1)
-        {
-            case 'a': cout<<fixed<<235.2/numar<<'\n'; break;
-            case 'b': cout<<fixed<<100/numar<<'\n'; break;
-            default: if(l1!='z') { cout<<"Alegere incorecta!"<<'\n'; break;}
-        }
-    }
-    while(l1!='z');
-}
 
 int main()
 {
-    cout<< "-----  -----  -   -  -   -  -----  -----  -----  -----  -----"<<endl;
-    cout<< "|      |   |  |-  |  |   |  |      |   |    |    |   |  |   |"<<endl;
-    cout<< "|      |   |  | - |   | |   |----  -----    |    |   |  -----"<<endl;
-    cout<< "|      |   |  |  -|    |    |      | -      |    |   |  | -  "<<endl;
-    cout<< "-----  -----  -   -    -    -----  -  --    -    -----  -  --"<<endl;
-    cout<<"a.Lungime \nb.Arie \nc.Volum \nd.Timp \ne.Viteza \nf.Temperatura \ng.Masa \nh.Energie \ni.Presiune \nj.Densitate \nk.Consum combustibil \n ";
-    char c;
-    do
-    {
-        cout<<'\n';
-        cout<<"Alegeti litera corespunzatoare marimii fizice \n"; cin>>c;
-        switch (c)
-        {
-            case 'a': transformare_lungime(numar); break;
-            case 'b': transformare_arie(numar); break;
-            case 'c': transformare_volum(numar); break;
-            case 'd': transformare_timp(numar); break;
-            case 'e': transformare_viteza(numar); break;
-            case 'f': transformare_temperatura(numar); break;
-            case 'g': transformare_masa(numar); break;
-            case 'h': transformare_energie(numar); break;
-            case 'i': transformare_presiune(numar); break;
-            case 'j': transformare_densitate(numar); break;
-            case 'k': transformare_combustibil(numar); break;
-            default: if(c!='x') {cout<<"Alegere incorecta!"<<'\n'; break;}
-        }
-    }
-    while(c!='x');
     return 0;
 }
